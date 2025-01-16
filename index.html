@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- --------------------------------navigationbar----------------------------- -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image of img/Product_Delivery_Truck_White_Icon_HD_PNG-removebg-preview.png" alt="">
+        </div>
+        <div class="search-container">
+            <!-- <input type="text" class="search-input" placeholder="Search..."> -->
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <!-- <li><a href="#">Portfolio</a></li> -->
+            <li><a href="services.html">Restaurant</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Add To Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- ---------------------------------main page----------------------------------->
+    <section class="main-home">
+        <h1 class="main-heading">
+            Food at Your Doorstep
+        </h1>
+        <h4 class="main-para">Delicious Meals, Delivered Fast – Explore Local Flavors with a Tap!</h4>
+
+        <input class="main-input" type="text" placeholder="Search...">
+        <ul class="ul-suggest" id="ul">
+
+            <a href="ahmedia.html">
+                <li class="suggest">Ahmedia</li>
+            </a>
+            <a href="zaitoon.html">
+                <li class="suggest">Zaitoon</li>
+            </a>
+            <a href="saisangeeth.html">
+                <li class="suggest">Sai Sangeet</li>
+            </a>
+            <a href="rahman.html">
+                <li class="suggest">Rahmaniya Biryani</li>
+            </a>
+            <a href="star.html">
+                <li class="suggest">Star Biryani</li>
+            </a>
+            <!-- <li class="suggest"></li>
+        <li class="suggest"></li>
+        <li class="suggest"></li> -->
+        </ul>
+    </section>
+    <!-- -----------------------------------------scroll animation------------------------------------ -->
+    <div class="scroll-container">
+        <div class="scroll-images">
+            <!-- First set of images -->
+            <img src="/image of img/Zaitoon.png" alt="Image 1" class="scroll-image">
+            <img src="image of img/ahmedia-logo.png" alt="Image 3" class="scroll-image">
+            <img src="image of img/Saisangeet-logo.webp" alt="Image 4" class="scroll-image">
+            <img src="image of img/KFC-Logo.png" alt="Image 2" class="scroll-image">
+            <img src="image of img/rahmaniya.jpeg" alt="Image 5" class="scroll-image">
+            <img src="image of img/star biryani.png" alt="Image 6" class="scroll-image">
+            <!-- <img src="image of img/Zaitoon.png" alt="Image 7" class="scroll-image"> -->
+
+            <!-- Duplicate the images to create the loop effect -->
+            <img src="/image of img/Zaitoon.png" alt="Image 1" class="scroll-image">
+            <img src="image of img/ahmedia-logo.png" alt="Image 3" class="scroll-image">
+            <img src="image of img/Saisangeet-logo.webp" alt="Image 4" class="scroll-image">
+            <img src="image of img/KFC-Logo.png" alt="Image 2" class="scroll-image">
+            <img src="image of img/rahmaniya.jpeg" alt="Image 5" class="scroll-image">
+            <img src="image of img/star biryani.png" alt="Image 6" class="scroll-image">
+            <!-- <img src="image of img/Zaitoon.png" alt="Image 7" class="scroll-image"> -->
+        </div>
+    </div>
+
+
+    <!-- ---------------------------------second main page--------------------------------- -->
+
+    <section class="home">
+        <div class="left">
+
+            <h1>
+                Delivery to Your Door
+            </h1>
+            <p>
+                Craving a delicious, home-cooked meal without the hassle of cooking? We is here to bring
+                the restaurant experience straight to you! Whether you're at home, at the office, or enjoying time with
+                family, we offer fast, reliable food delivery that lets you enjoy.
+            </p>
+            <button>
+                Order Now
+            </button>
+        </div>
+        <div class="right">
+            <img src="/image of img/door delivery img.jpg" alt="">
+        </div>
+
+    </section>
+    <hr>
+
+    <!-- -------------------------------------------serives page in shorts--------------------------------- -->
+
+    <section class="services">
+        <h1>
+            Our Services
+        </h1>
+        <div class="features-container">
+
+            <div class="feature" style="background-image: url(servies/location.webp);">
+                <h3>Real-Time Order Tracking</h3>
+                <p>
+                    Track your order in real-time! From preparation to delivery, know exactly when your meal will
+                    arrive—never miss a bite!</p>
+            </div>
+            <div class="feature" style="background-image: url(servies/1625646.png);">
+                <h3>Multiple Payment Options</h3>
+                <p>Pay however you prefer! Choose from secure options like credit/debit cards, PayPal, Apple Pay, or
+                    cash on delivery—enjoy your meals with ease!</p>
+            </div>
+            <div class="feature" style="background-image: url(servies/discount.webp);">
+                <h3>Exclusive Deals & Discounts</h3>
+                <p>Enjoy exclusive discounts and seasonal offers, plus earn rewards with every order! Your favorite
+                    meals just got more affordable.</p>
+            </div>
+            <div class="feature" style="background-image: url(servies/custamize.png);">
+                <h3>Customizable Orders</h3>
+                <p>Your meal, your choice! Customize ingredients, portion sizes, or add special instructions for a
+                    personalized dining experience every time.</p>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!-- -------------------------------------foods card  page-------------------------------- -->
+    <section class="foods-card">
+        <div>
+            <h1>Our Most Ordered Foods</h1>
+            <h2>By the Million Of People in India</h2>
+        </div>
+        <div class="cards-container" id="cards-container">
+        </div>
+
+    </section>
+
+    <!-- ----------------------------------------restaurant page------------------------------------ -->
+
+    <section class="foods-card">
+        <h1>Discover best restaurants on Dineout</h1>
+
+        <div class="Restaurants-card">
+            <div class="card-r">
+                <img src="resturant/ahmedia.jpg" alt="">
+                <div class="card__content">
+                    <p class="card__title">Ahmedia</p>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco.</p>
+                    <a href="ahmedia.html"><button class="card__button">Menu Page</button></a>
+                </div>
+            </div>
+            <div class="card-r">
+                <img src="resturant/zaiton1.avif" alt="">
+                <div class="card__content">
+                    <p class="card__title">Zaitoon</p>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco.</p>
+                    <a href="zaitoon.html"><button class="card__button">Menu Page</button></a>
+                </div>
+            </div>
+            <div class="card-r">
+                <img src="resturant/satr-biryani.jpg" alt="">
+                <div class="card__content">
+                    <p class="card__title">Satr Biryani</p>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco.</p>
+                    <a href="star.html"><button class="card__button">Menu Page</button></a>
+                </div>
+            </div>
+            <div class="card-r">
+                <img src="resturant/rahmaniya.webp" alt="">
+                <div class="card__content">
+                    <p class="card__title">Rahmaniya</p>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco.</p>
+                    <a href="rahman.html"><button class="card__button">Menu Page</button></a>
+                </div>
+            </div>
+            <div class="card-r">
+                <img src="resturant/sai sangeet.jpg" alt="">
+                <div class="card__content">
+                    <p class="card__title">Sai Sangeet</p>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco.</p>
+                    <a href="saisangeeth.html"><button class="card__button">Menu Page</button></a>
+                </div>
+            </div>
+            <div class="card-r">
+                <img src="resturant/kfg.jpeg" alt="">
+                <div class="card__content">
+                    <p class="card__title">K F C</p>
+                    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco.</p>
+                    <a href="rahman.html"><button class="card__button">Menu Page</button></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ----------------------------------------------footer section---------------------------- -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia augue nec eros sodales
+                    auctor.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li><i class="fa fa-phone"></i> 123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> email@example.com</li>
+                    <li><i class="fa fa-map-marker"></i> 123 Main Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="java.js"></script>
+</body>
+
+</html>

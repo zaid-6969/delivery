@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+
+<body>
+
+    <!-- --------------------navigation bar------------------------ -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image of img/Product_Delivery_Truck_White_Icon_HD_PNG-removebg-preview.png" alt="">
+        </div>
+        <div class="search-container">
+            <!-- <input type="text" class="search-input" placeholder="Search..."> -->
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="saisangeeth.html">Sai Sangeet</a>
+                <ul class="dropdown-content" style="list-style:none;;">
+                    <li><a href="zaitoon.html">Zaitoon</a></li>
+                    <li><a href="ahmedia.html">Ahmedia</a></li>
+                    <li><a href="star.html">Star Biryani</a></li>
+                    <li><a href="rahman.html">Rahmaniya</a></li>
+                </ul>
+            </li>
+            <li><a href="cart.html">Add To Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- ----------------------------main page------------------------------>
+
+
+    <section class="about-home" style="margin-top: 70px;">
+        <img src="image of img/Saisangeet-logo.webp" alt="">
+        <h1 style="color: #000000e0; font-family: cursive;">Menu</h1>
+    </section>
+    <!-- -----------------------------------------food cards---------------------------------- -->
+
+    <div class="cards-container">
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/full-meals.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Full Meal</h1>
+                <h1 class="product-price">Price: Rs. 100</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Full Meal', 100)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Instant_Pot_Lemon_Rice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Lemon Rice</h1>
+                <h1 class="product-price">Price: Rs. 60</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Lemon Rice', 60)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Tomato_Rice_Recipe___Thakkali_Sadam-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Tomato Rice</h1>
+                <h1 class="product-price">Price: Rs. 60</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Tomato Rice', 60)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/A_Beginner_s_Guide_to_the_Great_Wide_World_of_Indian_Dosa-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Dosa</h1>
+                <h1 class="product-price">Price: Rs. 80</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Dosa', 80)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Garlic_Mushroom_Fried_rice_-_myspicetrunk-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Mushroom Fried Rice</h1>
+                <h1 class="product-price">Price: Rs. 120</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Mushroom Fried Rice', 120)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Paneer_Fried_Rice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Paneer Fried Rice</h1>
+                <h1 class="product-price">Price: Rs. 120</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Paneer Fried Rice', 120)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Paneer Noodles.jpeg" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Paneer Noodles</h1>
+                <h1 class="product-price">Price: Rs. 150</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Paneer Noodles', 150)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Paneer_Noodles-removebg-preview (1).png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Paneer Noodles</h1>
+                <h1 class="product-price">Price: Rs. 150</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Paneer Noodles', 150)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/FOOD -South India - prabhakaran sambandam.jpeg" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Itly</h1>
+                <h1 class="product-price">Price: Rs. 80</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Itly', 80)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Mushroom_Chow_Mein_-_Khin_s_Kitchen-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Mushroom Chow Mein</h1>
+                <h1 class="product-price">Price: Rs. 50</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Mushroom Chow Mein', 50)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Instant_Pot_Lemon_Rice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Lemon Rice</h1>
+                <h1 class="product-price">Price: Rs. 60</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Lemon Rice', 60)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food veg/Paneer_Fried_Rice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Fried Rice</h1>
+                <h1 class="product-price">Price: Rs. 100</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Fried Rice', 100)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------------footer secti0n------------------------ -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia augue nec eros sodales
+                    auctor.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li><i class="fa fa-phone"></i> 123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> email@example.com</li>
+                    <li><i class="fa fa-map-marker"></i> 123 Main Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        //  -------------------------hamburger-----------------
+        
+                const mobileMenu = document.getElementById('mobile-menu');
+                const navLinks = document.querySelector('.nav-links');
+        
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                // ---------------------------------------card function----------------
+        
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+                function addToCart(itemName, itemPrice) {
+                    cart.push({ name: itemName, price: itemPrice });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${itemName} added to cart!`);
+                }
+            </script>
+</body>
+
+</html>

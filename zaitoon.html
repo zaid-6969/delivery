@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+
+<body>
+
+    <!-- --------------------navigation bar------------------------ -->
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image of img/Product_Delivery_Truck_White_Icon_HD_PNG-removebg-preview.png" alt="">
+        </div>
+        <div class="search-container">
+            <!-- <input type="text" class="search-input" placeholder="Search..."> -->
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="zaitoon.html">Zaitoon</a>
+                <ul class="dropdown-content" style="list-style:none;;">
+                    <li><a href="ahmedia.html">Ahmedia</a></li>
+                    <li><a href="saisangeeth.html">Sai Sangeet</a></li>
+                    <li><a href="star.html">Star Biryani</a></li>
+                    <li><a href="rahman.html">Rahmaniya</a></li>
+                </ul>
+            </li>
+            <li><a href="cart.html">Add To Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- ----------------------------main page------------------------------>
+
+
+    <section class="about-home" style="margin-top: 70px;">
+        <img src="image of img/Zaitoon.png" alt="">
+        <h1 style="color: #000;">Menu</h1>
+    </section>
+    <!-- -----------------------------------------food cards---------------------------------- -->
+
+    <div class="cards-container">
+
+        <div class="product">
+            <div class="product-image"><img src="food non-veg/chicken-sharwerma.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Chicken Sharwerma</h1>
+                <h1 class="product-price">Price: Rs. 70</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Chicken Sharwerma', 70)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food non-veg/Italian-pizza.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Pizza</h1>
+                <h1 class="product-price">Price: Rs. 300</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Pizza', 300)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food non-veg/khubs_lebanese_bread-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">khubs</h1>
+                <h1 class="product-price">Price: Rs. 20</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('khubs', 20)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/lime_mint_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Lime Juice</h1>
+                <h1 class="product-price">Price: Rs. 80</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Lime Juice', 80)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/Orange_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Orange juice</h1>
+                <h1 class="product-price">Price: Rs. 50</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Orange juice', 50)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/yellow_ice_land_smoothies-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">yellow ice</h1>
+                <h1 class="product-price">Price: Rs. 280</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('yellow ice', 280)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/papaya_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Papaya Juice</h1>
+                <h1 class="product-price">Price: Rs. 60</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Papaya Juice', 60)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/Pineapple_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Pineapple Juice</h1>
+                <h1 class="product-price">Price: Rs. 70</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Pineapple Juice', 70)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/kiwi_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Kiwi Juice</h1>
+                <h1 class="product-price">Price: Rs. 70</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Kiwi Juice', 70)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/Pineapple_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Pineapple Juice</h1>
+                <h1 class="product-price">Price: Rs. 70</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Pineapple Juice', 70)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="cool drings and juice/Orange_juice-removebg-preview.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Orange Juice</h1>
+                <h1 class="product-price">Price: Rs. 70</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Orange Juice', 70)">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image"><img src="food non-veg/burger.png" alt=""></div>
+            <div class="product-details">
+                <h1 class="product-name">Burger</h1>
+                <h1 class="product-price">Price: Rs. 200</h1>
+                <button class="add-to-cart-btn" onclick="addToCart('Burger', 200)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------------footer secti0n------------------------ -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia augue nec eros sodales
+                    auctor.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li><i class="fa fa-phone"></i> 123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> email@example.com</li>
+                    <li><i class="fa fa-map-marker"></i> 123 Main Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        //  -------------------------hamburger-----------------
+        
+                const mobileMenu = document.getElementById('mobile-menu');
+                const navLinks = document.querySelector('.nav-links');
+        
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                // ---------------------------------------card function----------------
+        
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+                function addToCart(itemName, itemPrice) {
+                    cart.push({ name: itemName, price: itemPrice });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${itemName} added to cart!`);
+                }
+            </script>
+</body>
+
+</html>
