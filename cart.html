@@ -6,6 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-page {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cart-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #cart-items {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #cart-items th,
+        #cart-items td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #cart-items th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .quantity-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-buttons button {
+            padding: 5px 10px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .quantity-buttons button:hover {
+            background-color: #e0554e;
+        }
+    </style>
 </head>
 
 <body style="font-family: Arial, sans-serif;background: #f9f9f9;">
@@ -42,10 +117,21 @@
     </nav>
     <!-- ------------------------cart section--------------------------- -->
 
-    <div class="cart-page">
+    <div class="cart-page" style="margin-top: 50px;">
         <div class="cart-container">
             <h1>Your Cart</h1>
-            <div id="cart-items"></div>
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
             <div id="total-amount" class="total">Total: Rs. 0</div>
             <div class="back-link">
                 <a href="test.html">Back to Products</a>
@@ -94,56 +180,84 @@
 
 
 
-    
+
     <script>
-// --------------------------hamberger-----------------------
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// -----------------------add to cart------------------------
-
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         function renderCart() {
-            const cartItems = document.getElementById('cart-items');
+            const cartItemsBody = document.querySelector('#cart-items tbody');
             const totalAmount = document.getElementById('total-amount');
-            cartItems.innerHTML = '';
+            cartItemsBody.innerHTML = '';
 
             if (cart.length === 0) {
-                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+                cartItemsBody.innerHTML = '<tr><td colspan="5">Your cart is empty.</td></tr>';
                 totalAmount.textContent = 'Total: Rs. 0';
                 return;
             }
 
-            let total = 0;
+            let grandTotal = 0;
 
             cart.forEach((item, index) => {
-                const cartItem = document.createElement('div');
-                cartItem.className = 'cart-item';
+                // Validate item fields
+                const name = item.name || "Unnamed Item";
+                const price = item.price > 0 ? item.price : 0;
+                const quantity = item.quantity > 0 ? item.quantity : 1;
 
-                cartItem.innerHTML = `
-            <span>${item.name} - Rs.${item.price}</span>
-            <button onclick="removeFromCart(${index})">Remove</button>
-        `;
+                const total = price * quantity; // Calculate total based on validated values
+                grandTotal += total;
 
-                cartItems.appendChild(cartItem);
-                total += item.price;
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+               <td>${name}</td>
+               <td>Rs. ${price}</td>
+               <td>
+                   <div class="quantity-buttons">
+                       <button onclick="decrementQuantity(${index})">-</button>
+                       <span>${quantity}</span>
+                       <button onclick="incrementQuantity(${index})">+</button>
+                   </div>
+               </td>
+               <td>Rs. ${total}</td>
+               <td><button onclick="removeFromCart(${index})">Remove</button></td>
+           `;
+
+                cartItemsBody.appendChild(row);
             });
 
-            totalAmount.textContent = `Total: Rs. ${total}`;
+            totalAmount.textContent = `Total: Rs. ${grandTotal}`;
         }
 
-        function removeFromCart(index) {
-            cart.splice(index, 1);
+        function incrementQuantity(index) {
+            // Ensure quantity is initialized properly
+            cart[index].quantity = cart[index].quantity > 0 ? cart[index].quantity + 1 : 1;
+
+            // Persist updated cart to localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
             renderCart();
         }
 
+        function decrementQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            } else {
+                cart[index].quantity = 1; // Prevent quantity from going below 1
+            }
+
+            // Persist updated cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove item from cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        // Initial render
         renderCart();
+
     </script>
 </body>
 
