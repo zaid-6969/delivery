@@ -593,14 +593,12 @@
      font-size: 25px;
      color: white;
      letter-spacing: 1px;
-     text-shadow: 0 0 0.3em #fff;
      position: relative;
      z-index: 1;
  }
 
  .feature p {
      letter-spacing: 1px;
-     text-shadow: 0 0 0.3em #fff;
      font-size: 16px;
      color: white;
      padding: 10px;
