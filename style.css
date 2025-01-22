@@ -107,43 +107,46 @@
  }
 
  .dropdown {
-    height: auto;
-    width: auto;
-    min-width: 100px;
-}
-.navbar .nav-links .dropdown-content {
-   display: none;
-   position: absolute;
-   top: 100%; /* Position below the parent */
-   left: 0;
-   background-color: #000;
-   border-radius: 5px;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   min-width: 150px;
- }
-.navbar .nav-links .dropdown-content li {
-   margin: 0;
- }
- 
- .navbar .nav-links .dropdown-content a {
-   display: block;
-   padding: 10px 15px;
-   color: white;
- }
- 
- .navbar .nav-links .dropdown-content a:hover {
-   background-color: #555;
- }
- 
- /* Show dropdown on hover */
- .navbar .nav-links .dropdown:hover .dropdown-content {
-   display: block;
+     height: auto;
+     width: auto;
+     min-width: 100px;
  }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-   width: 100%;
-}
+ .navbar .nav-links .dropdown-content {
+     display: none;
+     position: absolute;
+     top: 100%;
+     /* Position below the parent */
+     left: 0;
+     background-color: #000;
+     border-radius: 5px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     min-width: 150px;
+ }
+
+ .navbar .nav-links .dropdown-content li {
+     margin: 0;
+ }
+
+ .navbar .nav-links .dropdown-content a {
+     display: block;
+     padding: 10px 15px;
+     color: white;
+ }
+
+ .navbar .nav-links .dropdown-content a:hover {
+     background-color: #555;
+ }
+
+ /* Show dropdown on hover */
+ .navbar .nav-links .dropdown:hover .dropdown-content {
+     display: block;
+ }
+
+ .nav-links a:hover::after,
+ .nav-links a.active::after {
+     width: 100%;
+ }
 
  /* Hamburger Icon */
  .menu-toggle {
@@ -200,6 +203,7 @@
  }
 
  /* -------------------------main page------------------------- */
+
  .main-home {
      width: 100%;
      height: auto;
@@ -211,9 +215,7 @@
      background-image: url("image of img/mainpage.avif");
      background-repeat: no-repeat;
      object-fit: cover;
-     /* filter: grayscale(100%); */
      background-size: contain;
-     /* background-position: center; */
      background-attachment: fixed;
      background-repeat: round;
  }
@@ -238,13 +240,11 @@
  .main-input {
      width: 300px;
      height: 40px;
-     text-align: center;
-     /* color: black;    */
      margin-top: 50px;
      border-radius: 7px;
      border-style: none;
  }
-
+  
  .main-home ul {
      width: 300px;
      background-color: white;
@@ -269,12 +269,12 @@
 
  }
 
-.main-home ul a{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
+ .main-home ul a {
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     text-decoration: none;
+ }
 
  /* -----------------------------scroll animation-------------------------- */
 
@@ -747,91 +747,91 @@
      background-color: #f1c40f;
  }
 
-/* --------------------------------cart page----------------------- */
+ /* --------------------------------cart page----------------------- */
 
-.cart-page{
-    height: auto;
-    margin-top: 100px;
-    min-height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+ .cart-page {
+     height: auto;
+     margin-top: 100px;
+     min-height: 80vh;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 
-.cart-container {
+ .cart-container {
 
-   width: 100%;
-   height: 100%;
-}
+     width: 100%;
+     height: 100%;
+ }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+ h1 {
+     text-align: center;
+     margin-bottom: 20px;
+ }
 
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ffffff;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+ .cart-item {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: #ffffff;
+     margin-bottom: 10px;
+     padding: 15px;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
 
-.cart-item span {
-    font-size: 18px;
-}
+ .cart-item span {
+     font-size: 18px;
+ }
 
-.cart-item button {
-    padding: 5px 10px;
-    color: white;
-    background: #ff4d4d;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+ .cart-item button {
+     padding: 5px 10px;
+     color: white;
+     background: #ff4d4d;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
 
-.cart-item button:hover {
-    background: #e60000;
-}
+ .cart-item button:hover {
+     background: #e60000;
+ }
 
-.total {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-}
+ .total {
+     font-size: 20px;
+     font-weight: bold;
+     text-align: center;
+     margin-top: 20px;
+ }
 
-.empty-cart {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 18px;
-    color: #777;
-}
+ .empty-cart {
+     text-align: center;
+     margin-top: 50px;
+     font-size: 18px;
+     color: #777;
+ }
 
-.back-link {
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-}
+ .back-link {
+     display: block;
+     text-align: center;
+     margin-top: 30px;
+ }
 
-.back-link a {
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    border: 1px solid black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 10px 15px 0px 0px rgba(0, 0, 0, 0.5);
-}
+ .back-link a {
+     text-decoration: none;
+     font-size: 18px;
+     color: black;
+     border: 1px solid black;
+     padding: 10px 20px;
+     border-radius: 5px;
+     box-shadow: 10px 15px 0px 0px rgba(0, 0, 0, 0.5);
+ }
 
-.back-link a:hover {
-    background: black;
-    color: white;
-}
+ .back-link a:hover {
+     background: black;
+     color: white;
+ }
 
  /* -----------------------------------foods cards in main page------------------------- */
 
@@ -876,7 +876,8 @@ h1 {
      height: 254px;
      border-radius: 10px;
      background: #e0e0e0;
-     box-shadow: 5px 10px 15px #656;
+     /* box-shadow: 5px 10px 15px #656; */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
      text-align: center;
      transition: transform 0.5s ease;
  }
